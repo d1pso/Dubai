@@ -1,0 +1,204 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    @include scroll-appearance(0, -50%);
+    // .header__big-container
+    &__big-container {
+        min-height: 110px;
+
+        display: flex;
+        align-items: center;
+
+    }
+    // .header__logo
+    &__logo {
+        margin: 0 152px 0 0;
+    }
+    // .header__menu
+    &__menu {
+        flex: 1 1 100%;
+    }
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // .menu__body
+    &__body {
+        margin: 0 560px 0 0;
+
+    }
+    // .menu__list
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 52px;
+    }
+    // .menu__item
+    &__item {
+        position: relative;
+    }
+    // .menu__dropdown-button
+    &__dropdown-button {
+        padding: 0 18px 0 0;
+        position: relative;
+
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.21; /* 17/14 */
+        text-transform: uppercase;
+        transition: color .2s ease-in;
+
+        color: #FFFFFF;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background: url('/img/header/arrow down.svg') no-repeat;
+        }
+        &:hover {
+            color: #FCD54C;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: width .2s ease-out;
+            background-color: #FCD54C;
+        }
+        &:hover::before {
+            width: 100%;
+        }
+    }
+    // .menu__dropdown
+    &__dropdown {
+        position: absolute;
+        top: 33px;
+        left: 0;
+        width: 250px;
+
+        background: #272727;
+        border: 1px solid #979797;
+        transition: all .2s ease-in;
+        opacity: 0;
+        visibility: hidden;
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    // .menu__dropdown-item
+    &__dropdown-item {
+        padding: 10px 0px 10px 20px;
+
+        transition: background-color .2s ease-in;
+        cursor: pointer;
+        &:hover {
+            background-color: #FCD54C;
+        }
+        & .menu__dropdown-link {
+            transition: color .2s ease-in;
+        }
+        &:hover .menu__dropdown-link {
+            color: #272727;
+        }
+    }
+    // .menu__dropdown-link
+    &__dropdown-link {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.21; /* 17/14 */
+
+        color: #FFFFFF;
+    }
+    // .menu__link
+    &__link {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.21; /* 17/14 */
+        text-transform: uppercase;
+        transition: color .2s ease-in;
+
+        color: #FFFFFF;
+        &:hover {
+            color: #FCD54C;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: width .2s ease-out;
+            background-color: #FCD54C;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    // .menu__button
+    &__button {
+        margin:  0 120px 0 0;
+    }
+    // .menu__language-switcher
+    &__language-switcher {
+        margin: 0 53px 0 0;
+    }
+    // .menu__number
+    &__number {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.25; /* 20/16 */
+
+        color: #FFFFFF;
+    }
+
+}
+.language-switcher-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    // .language-switcher-menu__button
+    &__button {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.21; /* 17/14 */
+        text-transform: uppercase;
+        transition: color .2s ease-in;
+
+        color: #929292;
+        &:hover {
+            color: #FCD54C;
+        }
+    }
+    // .language-switcher-menu__button-en 
+    &__button-en {
+
+    }
+    // .language-switcher-menu__button-en--active
+    &__button-en--active {
+        color: #FCD54C;
+    }
+    // .language-switcher-menu__button-ru
+    &__button-ru {
+    }
+}
+

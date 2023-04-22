@@ -1,0 +1,28 @@
+.video {
+    // .video__big-container
+    &__big-container {
+        position: relative;
+
+        @include scroll-appearance(0, -5%)
+    }
+    // .video__block
+    &__block {
+        // height: 920px;
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        & img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+    // .video__button
+    &__button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

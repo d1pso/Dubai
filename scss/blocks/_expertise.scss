@@ -1,0 +1,48 @@
+.expertise {
+    padding: 70px 0 90px 0;
+    // .expertise__container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // .expertise__content
+    &__content {
+        max-width: 730px;
+    }
+    // .expertise__desc
+    &__desc {
+        margin: 0 0 40px 0;
+
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.6;
+
+        color: #FCD54C;
+        @include scroll-appearance(-120%, 0);
+    }
+    // .expertise__title
+    &__title {
+        margin: 0 0 33px 0;
+
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 4.375rem;
+        line-height: 0.99; /* 69/70 */
+        /* or 99% */
+
+
+        color: #E8E8E8;
+        @include scroll-appearance(-120%, 0);
+        transition: all 1s ease-in-out 0.1s;
+    }
+    // .expertise__text
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        
+        color: #E8E8E8;
+        @include scroll-appearance(-120%, 0);
+        transition: all 1s ease-in-out 0.2s;
+    }
+}

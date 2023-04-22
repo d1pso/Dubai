@@ -1,0 +1,28 @@
+.quote {
+    padding: 120px 0 65px 0;
+    // .quote__container
+    &__container {
+    }
+    // .quote__block
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #FCD54C;
+
+        @include scroll-appearance(0, -50%)
+    }
+    &__content {
+        padding: 70px 95px;
+
+        font-family: 'Gilroy';
+        font-weight: 400;
+        font-size: 1.875rem;
+        line-height: 1.6;
+
+        color: #FFFFFF;
+        & span {
+            color: #FCD54C;
+        }
+    }
+}

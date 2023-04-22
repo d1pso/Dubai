@@ -1,0 +1,182 @@
+.articles {
+    padding: 140px 0 85px 0;
+    // .articles__container
+    &__container {
+    }
+    // .articles__heading
+    &__heading {
+        margin: 0 0 90px 0;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include scroll-appearance(0, -80%);
+    }
+    // .articles__title
+    &__title {
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 4.375rem;
+        line-height: 1.21; /* 85/70 */
+
+        color: #FFFFFF;
+    }
+    // .articles__button
+    &__button {
+        position: relative;
+        padding: 0 32px 0 0;
+
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.31;
+
+        color: #929292;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 15px;
+            height: 25px;
+            background: url('/img/articles/arrow.svg') no-repeat;
+        }
+    }
+    // .articles__cards
+    &__cards {
+        display: flex;
+        column-gap: 30px;
+
+        &._active .card-articles{
+            transform: translate(0);
+            opacity: 1;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        &._active .card-articles:nth-child(1) {
+            transition: transform 1s ease-in-out 0.2s, opacity 1s ease-in-out 0.2s;
+        }
+        &._active .card-articles:nth-child(2) {
+            transition: transform 1s ease-in-out 0.4s, opacity 1s ease-in-out 0.4s;
+        }
+        &._active .card-articles:nth-child(3) {
+            transition: transform 1s ease-in-out 0.6s, opacity 1s ease-in-out 0.6s;
+        }
+    }
+    // .articles__card
+    &__card {
+    }
+}
+.card-articles {
+    position: relative;
+
+    border: 1px solid #272727;
+
+    transition: border .2s ease-in;
+
+    transform: translate(0, -50%);
+    opacity: 0;
+    &:hover {
+        background: #272727;
+        border: 1px solid #FCD54C;
+    }
+
+    &:hover .card-articles__image,
+    &:hover .card-articles__title {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover .block-hidden-card-articles {
+        opacity: 1;
+        visibility: visible;
+    }
+    // .card-articles__image
+    &__image {
+        width: 350px;
+        height: 352px;
+        transition: all .2s ease-in;
+        & img {
+            object-fit: cover;
+        }
+    }
+    // .card-articles__title
+    &__title {
+        position: absolute;
+        bottom: 53px;
+        left: 38px;
+
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 1.5625rem;
+        line-height: 1.4;
+
+        transition: opacity .2s ease-in;
+        color: #FFFFFF;
+    }
+    // .card-articles__block-hidden
+    &__block-hidden {
+    }
+}
+.block-hidden-card-articles {
+    position: absolute;
+    top: 41px;
+    left: 35px;
+
+    transition: all .2s ease-in;
+    opacity: 0;
+    visibility: hidden;
+    // .block-hidden-card-articles__date
+    &__date {
+        margin: 0 0 15px 0;
+
+        font-size: 1rem;
+        line-height: 1.62;
+
+        color: #FFFFFF;
+    }
+    // .block-hidden-card-articles__title
+    &__title {
+        margin: 0 0 28px 0;
+
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 1.5625rem;
+        line-height: 1.4;
+
+        color: #FFFFFF;
+    }
+    // .block-hidden-card-articles__text
+    &__text {
+        margin: 0 0 75px 0;
+        max-width: 280px;
+
+        font-size: 1rem;
+        line-height: 1.62;
+
+        color: #929292;
+    }
+    // .block-hidden-card-articles__button
+    &__button {
+        padding: 0 31px 0 0;
+        position: relative;
+
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        color: #FCD54C;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 15px;
+            height: 25px;
+            background: url('/img/articles/Arrow\(yellow\).svg') no-repeat;
+        }
+    }
+}

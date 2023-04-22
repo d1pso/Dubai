@@ -1,0 +1,201 @@
+.projects {
+    padding: 105px 0 0 0;
+    // .projects__big-container
+    &__big-container {
+    }
+    // .projects__heading
+    &__heading {
+        margin: 0 0 80px 0;
+    }
+    // .projects__card
+    &__card {
+    }
+}
+.project {
+    // .project__container
+    &__container {
+    }
+}
+.heading-projects {
+    display: flex;
+    align-items: center;
+
+    @include scroll-appearance(0, -120%);
+    // .heading-projects__title
+    &__title {
+        flex: 1 1 auto;
+
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.4; /* 69/48 */
+
+        color: #FFFFFF;
+    }
+    // .heading-projects__actions
+    &__actions {
+        margin: 0 45px 0 0;
+
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+    // .heading-projects__button
+    &__button {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.3; /* 21/16 */
+
+        transition: color .2s ease-in;
+        color: #FFFFFF;
+        &:hover {
+            color: #FCD54C;
+        }
+    }
+    // .heading-projects__button--active
+    &__button--active {
+        color: #FCD54C;
+    }
+    // .heading-projects__link
+    &__link {
+        font-family: 'Gilroy';
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.3;
+
+        color: #929292;
+    }
+}
+.projects-swiper {
+}
+.swiper {
+}
+.project-swiper-wrapper {
+    height: 685px !important;
+
+    &._active .projects-swiper-slide {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    &._active .projects-swiper-slide:nth-child(1) {
+        transition: all 1s ease-in-out 0.2s;
+    }
+    &._active .projects-swiper-slide:nth-child(2) {
+        transition: all 1s ease-in-out 0.4s;
+    }
+    &._active .projects-swiper-slide:nth-child(3) {
+        transition: all 1s ease-in-out 0.6s;
+    }
+    &._active .projects-swiper-slide:nth-child(4) {
+        transition: all 1s ease-in-out 0.8s;
+    }
+}
+.swiper-wrapper {
+}
+.projects-swiper-slide {
+    transition: all 1s ease-in-out;
+    transform: translate(0, -100%);
+    opacity: 0;
+}
+.swiper-slide {
+}
+.card-projects {
+    position: relative;
+
+    height: 569px;
+
+    transition: all 1s ease-in;
+    &:hover{
+        background-color: #FCD54C;
+    }
+    &:hover .card-projects__image {
+        opacity: 0;
+    }
+    &:hover .card-projects__name {
+        bottom: 0;
+        left: 30px;
+        top: 46px;
+
+        opacity: 1;
+
+        color: #272727;
+    }
+    &:hover .card-projects__text {
+        opacity: 1;
+    }
+    &:hover .card-projects__button {
+        opacity: 1;
+    }
+    // .card-projects__image
+    &__image{
+        transition: all .2s ease-in;
+    }
+    // .card-projects__name
+    &__name {
+        position: absolute;
+        bottom: 50px;
+        left: 41px;
+
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.4; /* 45/32 */
+        
+        transition: all .2s ease-in;
+        color: #FFFFFF;
+    }
+    // .card-projects__text
+    &__text {
+        max-width: 340px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+
+        font-size: 1.375rem;
+        line-height: 1.18; /* 26/22 */
+        
+        transition: all .2s ease-in;
+        opacity: 0;
+        color: #272727;
+    }
+    // .card-projects__button
+    &__button {
+        position: absolute;
+        bottom: 45px;
+        left: 30px;
+        
+        opacity: 0;
+        & a {
+            position: relative;
+            padding: 0 30px 0 0;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.15; /* 23/20 */
+    
+            color: #272727;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 12px;
+                height: 20px;
+                background: url('/img/projects/Arrow.svg') no-repeat;
+            }
+        }
+    }
+}
+.swiper-pagination {
+}
+.swiper-pagination-bullet {
+    width: 13px !important;
+    height: 13px !important;
+    background: #929292 !important;
+    &-active {
+        background: #FCD54C !important;
+    }
+}
